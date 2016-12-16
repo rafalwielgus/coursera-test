@@ -1,0 +1,11 @@
+<div class="loader">
+
+</div>
+<br><br><br>
+<ol>
+  <li ng-repeat="item in list.menu">
+    {{ item.quantity }} of {{ item.name }}
+    <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+  </li>
+</ol>
+<div class="error" ng-if="list.isListEmpty();">Nothing found.</div>
